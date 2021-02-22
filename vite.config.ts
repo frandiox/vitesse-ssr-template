@@ -10,6 +10,7 @@ import WindiCSS from 'vite-plugin-windicss'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
+import viteSSR from 'vite-ssr/plugin'
 
 export default defineConfig({
   resolve: {
@@ -18,6 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    viteSSR(),
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
