@@ -1,15 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build"
+    "dev": "vite --port 3333 --open --force",
+    "dev:ssr": "vite-ssr --port 3333 --open --force",
+    "clean": "rm -rf dist && rm -rf serverless/public && rm -rf serverless/api/renderer",
+    "build": "pnpm clean && cross-env NODE_ENV=production vite-ssr build && ./scripts/move-dist.sh",
+    "preview": "cd serverless && vercel dev"
   },
   "dependencies": {
     "@vueuse/core": "^4.1.1",
     "@vueuse/head": "^0.2.3",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.1.4",
-    "vite-ssr": "^0.4.0",
+    "vite-ssr": "^0.4.1",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-rc.7",
     "vue-router": "^4.0.4"
@@ -26,9 +29,11 @@
     "cross-env": "^7.0.3",
     "eslint": "^7.20.0",
     "markdown-it-prism": "^2.1.4",
+    "node-fetch": "^2.6.1",
     "pnpm": "^5.17.2",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.5",
-    "vite": "^2.0.1",
+    "vite": "^2.0.2",
     "vite-plugin-components": "^0.6.12",
     "vite-plugin-icons": "^0.2.2",
     "vite-plugin-md": "^0.5.1",
