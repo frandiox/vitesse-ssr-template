@@ -11,6 +11,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
 import viteSSR from 'vite-ssr/plugin'
+import getPageProps from './serverless/api/get-page-props'
 
 export default defineConfig({
   resolve: {
@@ -20,6 +21,14 @@ export default defineConfig({
   },
   plugins: [
     viteSSR(),
+
+    {
+      // API mock-up
+      configureServer({ middlewares }) {
+        middlewares.use('/api/get-page-props', getPageProps)
+      },
+    },
+
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -100,11 +109,6 @@ export default defineConfig({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
   ],
-  // https://github.com/antfu/vite-ssg
-  ssgOptions: {
-    script: 'async',
-    formatting: 'minify',
-  },
 
   optimizeDeps: {
     include: [

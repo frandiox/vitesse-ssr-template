@@ -13,7 +13,7 @@ const { t } = useI18n()
         <carbon-warning class="inline-block" />
       </p>
     </div>
-    <router-view />
+    <router-view v-bind="$attrs" />
     <div>
       <button
         class="btn m-3 text-sm mt-8"

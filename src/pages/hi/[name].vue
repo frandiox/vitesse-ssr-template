@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { defineProps } from 'vue'
 
 const props = defineProps({
+  message: String,
   name: {
     type: String,
     required: true,
@@ -34,5 +35,6 @@ const { t } = useI18n()
         {{ t('button.back') }}
       </button>
     </div>
+    Message from API: {{ props.message }}
   </div>
 </template>

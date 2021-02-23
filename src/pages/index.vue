@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { defineProps, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -7,11 +7,14 @@ const name = ref('')
 
 const router = useRouter()
 const go = () => {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+  if (name.value) router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 
 const { t } = useI18n()
+
+const props = defineProps({
+  message: String,
+})
 </script>
 
 <template>
@@ -20,8 +23,12 @@ const { t } = useI18n()
       <carbon-campsite class="inline-block" />
     </p>
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
+      <a
+        rel="noreferrer"
+        href="https://github.com/frandiox/vitesse-ssr"
+        target="_blank"
+      >
+        Vitesse SSR
       </a>
     </p>
     <p>
@@ -40,18 +47,15 @@ const { t } = useI18n()
       class="px-4 py-2 text-sm text-center bg-transparent border border-gray-200 rounded outline-none active:outline-none dark:border-gray-700"
       style="width: 250px"
       @keydown.enter="go"
-    >
+    />
     <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
 
     <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
+      <button class="m-3 text-sm btn" :disabled="!name" @click="go">
         {{ t('button.go') }}
       </button>
     </div>
+    Message from API: {{ props.message }}
   </div>
 </template>
 
