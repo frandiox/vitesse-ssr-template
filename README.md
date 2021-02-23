@@ -1,14 +1,10 @@
 # Vitesse SSR
 
-> This is a Vue + Vite + SSR template based on [@antfu](https://github.com/antfu)'s [Vitesse](https://github.com/antfu/vitesse) and adding [`vite-ssr`](https://github.com/frandiox/vite-ssr).
-
-<br>
+> Vue + Vite + SSR template based on [@antfu](https://github.com/antfu)'s [Vitesse](https://github.com/antfu/vitesse) with [`vite-ssr`](https://github.com/frandiox/vite-ssr).
 
 <p align='center'>
 <a href="https://vitesse-ssr.vercel.app/">Live Demo</a>
 </p>
-
-<br>
 
 ## Features
 
@@ -96,14 +92,14 @@ As this template is strongly opinionated, the following provides a curated list 
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/frandiox/vitesse-ssr/generate).
+[Create a repo from this template on GitHub](https://github.com/frandiox/vitesse-ssr-template/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit frandiox/vitesse-ssr my-vitesse-app
+npx degit frandiox/vitesse-ssr-template my-vitesse-app
 cd my-vitesse-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```

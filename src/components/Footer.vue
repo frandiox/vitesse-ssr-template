@@ -68,7 +68,7 @@ const toggleLocales = () => {
     <a
       class="icon-btn mx-2"
       rel="noreferrer"
-      href="https://github.com/frandiox/vitesse-ssr"
+      href="https://github.com/frandiox/vitesse-ssr-template"
       target="_blank"
       title="GitHub"
     >

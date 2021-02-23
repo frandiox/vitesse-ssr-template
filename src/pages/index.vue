@@ -25,7 +25,7 @@ const props = defineProps({
     <p>
       <a
         rel="noreferrer"
-        href="https://github.com/frandiox/vitesse-ssr"
+        href="https://github.com/frandiox/vitesse-ssr-template"
         target="_blank"
       >
         Vitesse SSR
