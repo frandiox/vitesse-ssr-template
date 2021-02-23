@@ -2,6 +2,14 @@
 
 > This is a Vue + Vite + SSR template based on [@antfu](https://github.com/antfu)'s [Vitesse](https://github.com/antfu/vitesse) and adding [`vite-ssr`](https://github.com/frandiox/vite-ssr).
 
+<br>
+
+<p align='center'>
+<a href="https://vitesse-ssr.vercel.app/">Live Demo</a>
+</p>
+
+<br>
+
 ## Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
@@ -28,7 +36,7 @@
 
 - 🦾 TypeScript, of course
 
-- ☁️ Deploy on Netlify, zero-config
+- ☁️ Deploy on Vercel, minimal [config](./serverless/vercel.json)
 
 <br>
 
@@ -70,7 +78,7 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
 - [`vite-ssr`](https://github.com/frandiox/vite-ssr) - Server-side rendering
-- [Netlify](https://www.netlify.com/) - deploy
+- [Vercel](https://vercel.com/) - deploy
 - [VS Code Extensions](./.vscode/extensions.json)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)
@@ -120,7 +128,8 @@ And, enjoy :)
 Just run and visit http://localhost:3333
 
 ```bash
-pnpm dev
+pnpm dev # SSR development
+pnpm dev:spa # SPA without SSR
 ```
 
 ### Build
@@ -131,11 +140,17 @@ To build the App, run
 pnpm build
 ```
 
-And you will see the generated file in `dist` that ready to be served.
+And you will see the generated files in `dist`, and some of these files will be moved to `serverless` for deployment.
 
-### Deploy on Netlify
+### Deploy on Vercel
 
-Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
+Go to [Vercel](https://vercel.com) and install its CLI. Then:
+
+```bash
+pnpm preview # Simulate Vercel environment locally
+pnpm deploy
+pnpm deploy:prod
+```
 
 ## Why
 
