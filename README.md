@@ -1,19 +1,6 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/108018558-11e8d480-7053-11eb-99a6-eb18b5da5031.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+# Vitesse SSR
 
-<p align='center'>
-Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
-<sub><em>Now with <a href="http://windicss.netlify.app/">Windi CSS</a>! ⚡️</em></sub>
-</p>
-
-<br>
-
-<p align='center'>
-<a href="https://vitesse.netlify.app/">Live Demo</a>
-</p>
-
-<br>
+> This is a Vue + Vite + SSR template based on [@antfu](https://github.com/antfu)'s [Vitesse](https://github.com/antfu/vitesse) and adding [`vite-ssr`](https://github.com/frandiox/vite-ssr).
 
 ## Features
 
@@ -37,7 +24,7 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
 
 - 🔥 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
 
-- 🖨 Server-side generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg)
+- 🖨 Server-side rendering (SSR) in Node.js via [vite-ssr](https://github.com/frandiox/vite-ssr)
 
 - 🦾 TypeScript, of course
 
@@ -82,7 +69,7 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
-- [`vite-ssg`](https://github.com/antfu/vite-ssg) - Server-side generation
+- [`vite-ssr`](https://github.com/frandiox/vite-ssr) - Server-side rendering
 - [Netlify](https://www.netlify.com/) - deploy
 - [VS Code Extensions](./.vscode/extensions.json)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
@@ -101,14 +88,14 @@ As this template is strongly opinionated, the following provides a curated list 
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
+[Create a repo from this template on GitHub](https://github.com/frandiox/vitesse-ssr/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit antfu/vitesse my-vitesse-app
+npx degit frandiox/vitesse-ssr my-vitesse-app
 cd my-vitesse-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```

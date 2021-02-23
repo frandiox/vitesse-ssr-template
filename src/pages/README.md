@@ -10,11 +10,11 @@ Check out [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) f
 For example, instead of having
 
 ```ts
-import { isDark } from '../../../../logics'
+import utils from '../../../../utils'
 ```
 
 now you can use
 
 ```ts
-import { isDark } from '~/logics'
+import utils from '~/utils'
 ```
