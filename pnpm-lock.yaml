@@ -1,6 +1,5 @@
 dependencies:
   '@vueuse/core': 4.1.1_vue@3.0.5
-  '@vueuse/head': 0.2.3_vue@3.0.5
   nprogress: 0.2.0
   prism-theme-vars: 0.1.4
   vite-ssr: 0.4.1_16bf2dad8916445740b64ee395f55b03
@@ -1585,14 +1584,6 @@ packages:
       vue: '*'
     resolution:
       integrity: sha512-a+fu7FUHDzLpgcOGwbgyNZXLbm85NHEf4jkPkyqTtqHEHqU4aVbdyM0Vzl90PpFEDe92pJjoYJnZEQQgq9nEHw==
-  /@vueuse/head/0.2.3_vue@3.0.5:
-    dependencies:
-      vue: 3.0.5
-    dev: false
-    peerDependencies:
-      vue: '>=3'
-    resolution:
-      integrity: sha512-bAFZyUlT6+CVIwMcUw3TrtuhG/BfjS+UV5T8oH30tGPnVvqIsNuRCnNt9EbVd1GxHRDZD0K41515B5NiXPt84A==
   /@vueuse/shared/4.1.1_vue@3.0.5:
     dependencies:
       vue-demi: 0.6.0_vue@3.0.5
@@ -5001,7 +4992,6 @@ specifiers:
   '@vue/compiler-sfc': ^3.0.5
   '@vue/server-renderer': ^3.0.5
   '@vueuse/core': ^4.1.1
-  '@vueuse/head': ^0.2.3
   cross-env: ^7.0.3
   eslint: ^7.20.0
   markdown-it-prism: ^2.1.4

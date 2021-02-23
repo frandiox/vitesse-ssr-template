@@ -1,15 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --port 3333 --open --force",
-    "dev:ssr": "vite-ssr --port 3333 --open --force",
+    "dev": "vite-ssr --port 3333 --open",
+    "dev:spa": "vite --port 3333 --open",
     "clean": "rm -rf dist && rm -rf serverless/public && rm -rf serverless/api/renderer",
     "build": "pnpm clean && cross-env NODE_ENV=production vite-ssr build && ./scripts/move-dist.sh",
-    "preview": "cd serverless && vercel dev"
+    "preview": "cd serverless && vercel dev",
+    "deploy": "cd serverless && vercel",
+    "deploy:prod": "cd serverless && vercel --prod"
   },
   "dependencies": {
     "@vueuse/core": "^4.1.1",
-    "@vueuse/head": "^0.2.3",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.1.4",
     "vite-ssr": "^0.4.1",
