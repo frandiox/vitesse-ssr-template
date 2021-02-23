@@ -18,4 +18,4 @@ function vitesse() {
 }
 ```
 
-Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details. The SSR version of the teplate is [here](https://github.com/antfu/vitesse).
+Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details. The SSR version of the teplate is [here](https://github.com/frandiox/vitesse-ssr).
