@@ -1,6 +1,31 @@
 <script setup lang="ts">
+import { Ref, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { isDark, toggleDark } from '~/logics'
+import { useStorage, usePreferredDark, useToggle } from '@vueuse/core'
+
+const colorSchema = useStorage('color-schema', 'auto') as Ref<'auto' | 'dark' | 'light'>
+
+const preferredDark = usePreferredDark()
+
+const isDark = computed({
+  get() {
+    return colorSchema.value === 'auto' ? preferredDark.value : colorSchema.value === 'dark'
+  },
+  set(v: boolean) {
+    if (v === preferredDark.value)
+      colorSchema.value = 'auto'
+    else
+      colorSchema.value = v ? 'dark' : 'light'
+  },
+})
+
+const toggleDark = useToggle(isDark)
+
+watch(
+  isDark,
+  v => typeof document !== 'undefined' && document.documentElement.classList.toggle('dark', v),
+  { immediate: true },
+)
 
 const { t, availableLocales, locale } = useI18n()
 
@@ -9,6 +34,7 @@ const toggleLocales = () => {
   const locales = availableLocales
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
 }
+
 </script>
 
 <template>
