@@ -1,5 +1,8 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "dev": "vite-ssr --port 3333 --open",
     "dev:spa": "vite --port 3333 --open",
