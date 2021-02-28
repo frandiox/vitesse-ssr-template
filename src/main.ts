@@ -1,6 +1,7 @@
 import 'windi.css'
 import './styles/main.css'
 import viteSSR from 'vite-ssr'
+import { createHead } from '@vueuse/head'
 import generatedRoutes from 'pages-generated'
 import { setupLayouts } from 'layouts-generated'
 import App from './App.vue'
@@ -20,7 +21,10 @@ export default viteSSR(App, { routes }, (ctx) => {
     i.install?.(ctx)
   )
 
-  const { url, router, isClient, initialState } = ctx
+  const { app, url, router, isClient, initialState } = ctx
+
+  const head = createHead()
+  app.use(head)
 
   // Freely modify initialState and it will be serialized later
   if (import.meta.env.SSR) {
@@ -75,4 +79,6 @@ export default viteSSR(App, { routes }, (ctx) => {
 
     next()
   })
+
+  return { head }
 })
