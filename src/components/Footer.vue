@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 import { useStorage, usePreferredDark, useToggle } from '@vueuse/core'
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES as locales } from '~/i18n'
 
 const colorSchema = useStorage('color-schema', 'auto')
 
@@ -29,12 +31,18 @@ watch(
   { immediate: true }
 )
 
-const { t, availableLocales, locale } = useI18n()
+const { t, locale } = useI18n()
+
+const route = useRoute()
 
 const toggleLocales = () => {
   // change to some real logic
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+  const nextLocale =
+    locales[(locales.indexOf(locale.value) + 1) % locales.length]
+
+  const base = nextLocale === DEFAULT_LOCALE ? '' : `/${nextLocale}`
+
+  window.location.pathname = base + route.fullPath
 }
 </script>
 

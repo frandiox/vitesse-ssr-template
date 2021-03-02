@@ -106,7 +106,7 @@ export default defineConfig({
 
     // https://github.com/intlify/vite-plugin-vue-i18n
     VueI18n({
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [path.resolve(__dirname, 'src/i18n/translations/**')],
     }),
   ],
 
