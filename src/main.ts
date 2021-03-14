@@ -9,12 +9,6 @@ import App from './App.vue'
 
 const routes = setupLayouts(generatedRoutes)
 
-// This piece will move route.meta.state to Page props.
-// This can be removed if you prefer Vuex/Pinia instead of Page props.
-routes.forEach((route) => {
-  route.props = (r) => ({ ...(r.meta.state || {}), ...(r.props || {}) })
-})
-
 // https://github.com/frandiox/vite-ssr
 export default viteSSR(
   App,

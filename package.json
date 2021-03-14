@@ -17,7 +17,7 @@
     "@vueuse/head": "^0.3.1",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.1.4",
-    "vite-ssr": "^0.5.0",
+    "vite-ssr": "^0.6.4",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-rc.7",
     "vue-router": "^4.0.4"
