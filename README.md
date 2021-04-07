@@ -22,7 +22,7 @@
 
 - 😃 [Use icons from any icon sets, with no compromise](./src/components)
 
-- 🌍 [I18n ready](./locales)
+- 🌍 [I18n ready](./src/i18n/translations)
 
 - 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md)
 
