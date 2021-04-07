@@ -2,12 +2,12 @@
   "private": true,
   "dependencies": {
     "node-fetch": "*",
-    "@vueuse/core": "^4.4.1",
+    "@vueuse/core": "^4.7.0",
     "@vueuse/head": "^0.5.1",
     "nprogress": "^0.2.0",
-    "vue": "^3.0.7",
-    "@vue/server-renderer": "^3.0.7",
-    "vue-i18n": "^9.0.0-rc.7",
-    "vue-router": "^4.0.4"
+    "vue": "^3.0.11",
+    "@vue/server-renderer": "^3.0.11",
+    "vue-i18n": "^9.1.0",
+    "vue-router": "^4.0.6"
   }
 }
