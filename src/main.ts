@@ -3,7 +3,7 @@ import './styles/main.css'
 import viteSSR, { ClientOnly } from 'vite-ssr'
 import { createHead } from '@vueuse/head'
 import generatedRoutes from 'pages-generated'
-import { setupLayouts } from 'layouts-generated'
+import { setupLayouts } from 'virtual:generated-layouts'
 import { installI18n, extractLocaleFromPath, DEFAULT_LOCALE } from './i18n'
 import App from './App.vue'
 
